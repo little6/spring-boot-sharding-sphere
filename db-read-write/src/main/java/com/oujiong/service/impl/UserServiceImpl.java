@@ -35,4 +35,9 @@ public class UserServiceImpl implements UserService {
         userMapper.insert(user);
         return "保存成功";
     }
+
+    @Override
+    public List<User> findByUserIds(List<Integer> ids) {
+        return userMapper.findByUserIds(ids);
+    }
 }

@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Arrays;
+import java.util.List;
+
 
 /**
  * @Description: 接口测试
@@ -35,6 +38,15 @@ public class UserController {
     @GetMapping("list-user")
     public Object listUser() {
         return userService.list();
+    }
+
+    /**
+     * 根据id集合查询用户信息
+     * @return
+     */
+    @GetMapping("users")
+    public List<User> users(){
+        return userService.findByUserIds(Arrays.asList(2,10,1));
     }
 
 }

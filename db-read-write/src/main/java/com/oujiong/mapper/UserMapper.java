@@ -28,4 +28,5 @@ public interface UserMapper {
      */
     List<User> selectAll();
 
+    List<User> findByUserIds(List<Integer> ids);
 }

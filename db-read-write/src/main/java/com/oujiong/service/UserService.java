@@ -23,4 +23,10 @@ public interface UserService {
      */
     String saveOne(User user);
 
+    /**
+     * @description: 根据id集合查询用户信息
+     * @author: hyy
+     * @date: 2020/8/18 7:45 下午
+     */
+    List<User> findByUserIds(List<Integer> ids);
 }
