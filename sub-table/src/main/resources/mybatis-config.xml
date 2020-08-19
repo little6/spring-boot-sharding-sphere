@@ -4,7 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="com.oujiong.entity"/>
+        <!--<package name="com.oujiong.entity"/>-->
+        <typeAlias type="com.oujiong.entity.User" alias="user"/>
     </typeAliases>
     <mappers>
         <mapper resource="mapper/UserMapper.xml"/>
